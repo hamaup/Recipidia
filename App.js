@@ -13,7 +13,7 @@ import { PaperProvider, Card, Title, Paragraph, Chip, useTheme } from 'react-nat
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
 import { FormTokenField } from '@wordpress/components';
-import { API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, VISION_API_KEY } from '@env';
+import { API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, VISION_API_KEY, API_URL } from '@env';
 
 const firebaseConfig = {
   apiKey: API_KEY,
@@ -216,7 +216,7 @@ function RecipeScreen({ navigation }) {
   const handlePress = async () => {
     try {
       const useOnlyFoodstuff = selectUseOnlyFoodstuff === "この食材だけ使う" ? 0 : 1;
-      const response = await fetch('http://localhost:3000/api/generate-recipe', {
+      const response = await fetch(API_URL + "/api/generate-recipe", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -323,7 +323,7 @@ function RecipeScreen({ navigation }) {
 
   const analyzeImageResult = async (joinedDescriptions) => {
     try {
-      const response = await fetch('http://localhost:3000/api/analyze-image-result', {
+      const response = await fetch(API_URL + "/api/analyze-image-result", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

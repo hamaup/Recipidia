@@ -28,7 +28,6 @@ ChatGPTがはじき出した答えが人気の料理になるかもしれませ�
 
 ## 動作demo
 
-https://github.com/hamaup/Recipidia/assets/32893785/0e61d83e-5579-4b8b-8109-f2722ca8e31d
-
+https://github.com/hamaup/Recipidia/assets/32893785/f23b605c-0502-4263-b7f2-ce2075d32fe6
 
 
